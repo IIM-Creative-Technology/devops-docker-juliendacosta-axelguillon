@@ -1,6 +1,7 @@
 {
   "name": "plateforme_elearning",
   "version": "0.1.0",
+  "homepage": "https://juliendacosta.com/code-editor",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
@@ -9,6 +10,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "build": "^0.1.4",
     "codemirror": "^5.58.1",
     "react": "^16.13.1",
     "react-codemirror2": "^7.2.1",
