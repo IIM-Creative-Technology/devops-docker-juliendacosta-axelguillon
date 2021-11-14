@@ -25,14 +25,10 @@ jobs:
       - name: "Build app"
         run: npm build
 
-      - name: Checkout Code
-        uses: actions/checkout@v2
+      - name: "Lint code"
+        uses: stefanoeb/eslint-action@1.0.2
         with:
-          # Full git history is needed to get a proper list of changed files within `super-linter`
-          fetch-depth: 0
-
-      - name: Lint Code Base
-        uses: github/super-linter@v4
+          files: src/
 
 #      - name: "Run tests"
 #        run: npm run test -- --no-watch --no-progress
