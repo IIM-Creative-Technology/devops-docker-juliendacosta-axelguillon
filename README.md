@@ -1,6 +1,6 @@
 # Stages
 
-ESLint is useful for identifying and reporting on patterns
+ESLint is useful for identifying and reporting on patterns found in ECMAScript/JavaScript code.
 
 Prettier is a code formatter supporting many languages
 
