@@ -1,3 +1,9 @@
+# Stages
+
+ESLint is useful for identifying and reporting on patterns
+
+Prettier is a code formatter supporting many languages
+
 # Docker
 
 Compose for dev : docker-compose -f docker-compose.yml -f docker-compose-dev.yml up -d --build
