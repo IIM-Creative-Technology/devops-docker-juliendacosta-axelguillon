@@ -1,7 +1,7 @@
 {
   "name": "plateforme_elearning",
   "version": "0.1.0",
-  "homepage": "http://juliendacosta.com/code-editor",
+  "homepage": "https://code-editor-a4-iim.herokuapp.com/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
