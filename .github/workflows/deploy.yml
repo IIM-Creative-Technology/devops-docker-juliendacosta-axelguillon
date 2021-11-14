@@ -25,13 +25,16 @@ jobs:
       - name: "Build app"
         run: npm build
 
-      - name: "Lint code"
+      - name: "ESLint"
         uses: stefanoeb/eslint-action@1.0.2
         with:
           files: src/
 
 #      - name: "Run tests"
 #        run: npm run test -- --no-watch --no-progress
+
+        - name: "Prettier"
+          uses: creyD/prettier_action@v4.0
 
       - name: "Install ruby"
         uses: ruby/setup-ruby@v1
