@@ -1,23 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './components/App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./components/App";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 class AppContainer extends React.Component {
-  constructor (props){
-    super ();
+  constructor(props) {
+    super();
   }
-  render (){
+  render() {
     return (
       <div>
-          <p>{`Hello ${process.env.REACT_APP_NAME}`}</p>
+        <p>{`Hello ${process.env.REACT_APP_NAME}`}</p>
         <AppJumbotron title="Objectifs" />
         <ItemList />
         <br />
@@ -31,30 +31,34 @@ class AppContainer extends React.Component {
 }
 
 class Item extends React.Component {
-  constructor (props){
-    super ();
+  constructor(props) {
+    super();
 
     this.state = {
-      checked: false
+      checked: false,
     };
 
-    this.handleClick = this.handleClick.bind(this);    
+    this.handleClick = this.handleClick.bind(this);
   }
-  handleClick (e){
+  handleClick(e) {
     this.setState({
-      checked: !this.state.checked
+      checked: !this.state.checked,
     });
-
   }
-  render (){
-    let text = this.state.checked ? <strike>{this.props.message}</strike> : this.props.message;
+  render() {
+    let text = this.state.checked ? (
+      <strike>{this.props.message}</strike>
+    ) : (
+      this.props.message
+    );
     return (
-        <div className="row">
-          <div className="col-md-12">
-            <input type="checkbox" onClick={this.handleClick} />&nbsp;{text}
-            <hr />
-          </div>
+      <div className="row">
+        <div className="col-md-12">
+          <input type="checkbox" onClick={this.handleClick} />
+          &nbsp;{text}
+          <hr />
         </div>
+      </div>
     );
   }
 }
@@ -66,30 +70,26 @@ let item4 = <Item message="Faire une rotation à 90° de l'objet" />;
 let allTheThings = [item2, item3, item4];
 
 class ItemList extends React.Component {
-  constructor (props){
-    super ();
+  constructor(props) {
+    super();
   }
-  render (){
-    let items = allTheThings.map(thing => thing);
-    return (
-        <h4>{items}</h4>
-    );
+  render() {
+    let items = allTheThings.map((thing) => thing);
+    return <h4>{items}</h4>;
   }
 }
 
 class ItemCount extends React.Component {
-  constructor (props){
-    super ();
+  constructor(props) {
+    super();
   }
-  render (){
-    return (
-      <h4>Il y a {this.props.count} objectifs sur cette liste.</h4>
-    );
+  render() {
+    return <h4>Il y a {this.props.count} objectifs sur cette liste.</h4>;
   }
 }
 
 class AppJumbotron extends React.Component {
-  render (){
+  render() {
     return (
       <div className="jumbotron">
         <h2>{this.props.title}</h2>
@@ -98,7 +98,5 @@ class AppJumbotron extends React.Component {
   }
 }
 
-let target = document.getElementById('app');
+let target = document.getElementById("app");
 ReactDOM.render(<AppContainer />, target);
-
-
