@@ -1,3 +1,9 @@
+# Docker
+
+Compose for dev : docker-compose -f docker-compose.yml -f docker-compose-dev.yml up -d --build
+
+Compose for prod : docker-compose -f docker-compose.yml -f docker-compose-prod.yml up -d --build
+
 # Code editor in React
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

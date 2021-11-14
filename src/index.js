@@ -17,6 +17,7 @@ class AppContainer extends React.Component {
   render (){
     return (
       <div>
+          <p>{`Hello ${process.env.REACT_APP_NAME}`}</p>
         <AppJumbotron title="Objectifs" />
         <ItemList />
         <br />
