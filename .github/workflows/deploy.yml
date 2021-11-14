@@ -25,8 +25,8 @@ jobs:
       - name: "Build app"
         run: npm build
 
-      - name: "Test"
-        run: npm test
+#      - name: "Run tests"
+#        run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
 
       - name: "Install ruby"
         uses: ruby/setup-ruby@v1
