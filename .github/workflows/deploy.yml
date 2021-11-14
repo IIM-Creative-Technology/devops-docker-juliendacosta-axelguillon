@@ -20,10 +20,10 @@ jobs:
           node-version: '14'
 
       - name: "Install dependencies"
-        run: npm run install
+        run: npm install
 
       - name: "Build app"
-        run: npm run build
+        run: npm build
 
       - name: "Install ruby"
         uses: ruby/setup-ruby@v1
